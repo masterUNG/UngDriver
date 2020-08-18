@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:ungdriver/models/job_model.dart';
 
 class DetailJob extends StatefulWidget {
@@ -19,6 +20,22 @@ class _DetailJobState extends State<DetailJob> {
     model = widget.jobModel;
   }
 
+  Set<Marker> mySet() {
+    return <Marker>[
+      Marker(
+        infoWindow:
+            InfoWindow(title: 'สถานที่ทำงาน', snippet: model.nameJob),
+        markerId: MarkerId('myID'),
+        position: LatLng(
+          double.parse(model.lat.trim()),
+          double.parse(
+            model.lng.trim(),
+          ),
+        ),
+      ),
+    ].toSet();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,8 +49,21 @@ class _DetailJobState extends State<DetailJob> {
             child: Text(model.detailJob),
           ),
           Expanded(
-                      child: Container(color: Colors.grey,
-              // child: Text('Map'),
+            child: Container(
+              color: Colors.grey,
+              child: GoogleMap(
+                initialCameraPosition: CameraPosition(
+                  target: LatLng(
+                    double.parse(model.lat.trim()),
+                    double.parse(
+                      model.lng.trim(),
+                    ),
+                  ),
+                  zoom: 16,
+                ),
+                onMapCreated: (controller) {},
+                markers: mySet(),
+              ),
             ),
           ),
         ],
