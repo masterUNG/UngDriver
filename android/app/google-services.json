@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "971685598724",
+    "firebase_url": "https://ungdriver-9406e.firebaseio.com",
+    "project_id": "ungdriver-9406e",
+    "storage_bucket": "ungdriver-9406e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971685598724:android:87107d7522776691c2c751",
+        "android_client_info": {
+          "package_name": "com.flutterthailand.ungdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971685598724-gvt3ebiuva51autkhqn73mrtdn6c1omq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2XxnuvGz8PCsaw2dC4Yergkl_9V5kqmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971685598724-gvt3ebiuva51autkhqn73mrtdn6c1omq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
